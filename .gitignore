@@ -29,3 +29,7 @@ hs_err_pid*
 .gradle
 
 build/
+
+.settings/org.eclipse.buildship.core.prefs
+.classpath
+.project
