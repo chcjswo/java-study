@@ -1,4 +1,10 @@
-language: java
+#language: java
+#
+#jdk:
+#  - oraclejdk8
 
-jdk:
-  - oraclejdk8
+# .travis.yml
+language: java
+sript: "make test"
+notifications:
+  slack: mocadev-games:X9lWQg7gVSlp6jVFvYLmoxef
