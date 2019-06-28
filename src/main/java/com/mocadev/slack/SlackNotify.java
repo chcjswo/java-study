@@ -26,7 +26,10 @@ public class SlackNotify {
     }
 
     private static void slackNotify() throws IOException {
-        String hooksSlack = "https://hooks.slack.com/services/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";
+        // 개인 채널
+        // String hooksSlack = "https://hooks.slack.com/services/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";
+
+        String hooksSlack = "https://hooks.slack.com/services/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";
 
         CloseableHttpClient client = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(hooksSlack);

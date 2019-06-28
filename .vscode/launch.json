@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SlackNotify",
+            "request": "launch",
+            "mainClass": "com.mocadev.slack.SlackNotify",
+            "projectName": "java-study"
+        }
+    ]
+}
