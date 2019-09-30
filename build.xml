@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Account" default="junit-test" basedir=".">
+    <target name="junit-test" description="Runs JUnit Tests">
+        <junit printsummary="yes">
+            <classpath>
+                <pathelement location="${basedir}/build/" />
+                <pathelement location="junit-4.7.jar" />
+            </classpath>
+            <test name="test.java.tdd.AccountTest" />
+        </junit>
+    </target>
+</project>
