@@ -1,7 +1,6 @@
 install: gradle wrapper --gradle-version 6.1
 language: java
 jdk:
-    - oraclejdk8
     - openjdk8
 
 before_install:
