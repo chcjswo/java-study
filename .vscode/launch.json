@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TestPattern",
+            "request": "launch",
+            "mainClass": "designpattern.decorator.case1.use.TestPattern",
+            "projectName": "java-study"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SlackNotify",
             "request": "launch",
             "mainClass": "com.mocadev.slack.SlackNotify",
