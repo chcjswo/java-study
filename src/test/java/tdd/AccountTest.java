@@ -1,10 +1,9 @@
 package tdd;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Created by chcjswo on 2019-07-28
@@ -15,24 +14,20 @@ public class AccountTest {
 
     private Account account;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         account = new Account(10000);
     }
 
     @Test
-    public void testAccount() throws Exception {
-    }
-
-    @Test
     public void testGetBalance() throws Exception {
-        assertEquals("10000원 계좌 생성 후 잔고 조회 ", 10000, account.getBalance());
+        assertEquals(10000, account.getBalance());
 
         account = new Account(1000);
-        assertEquals("1000원 계좌 생성 후 잔고 조회 ", 1000, account.getBalance());
+        assertEquals(1000, account.getBalance());
 
         account = new Account(0);
-        assertEquals("0원 계좌 생성 후 잔고 조회 ", 0, account.getBalance());
+        assertEquals(0, account.getBalance());
     }
 
     @Test
