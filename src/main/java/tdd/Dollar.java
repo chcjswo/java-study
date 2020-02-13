@@ -6,12 +6,12 @@ package tdd;
  * Blog: https://mocadev.tistory.com
  */
 public class Dollar extends Money {
-    public Dollar(int amount) {
-        this.amount = amount;
+    public Dollar(int amount, String currency) {
+        super(amount, currency);
     }
 
     public Money times(int multiply) {
-        return new Dollar(amount * multiply);
+        return new Dollar(amount * multiply, currency);
     }
 
     public int amount() {
@@ -22,5 +22,10 @@ public class Dollar extends Money {
     public boolean equals(Object object) {
         Money money = (Money) object;
         return amount == money.amount;
+    }
+
+    @Override
+    public String currency() {
+        return currency;
     }
 }

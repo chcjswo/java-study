@@ -14,8 +14,8 @@ public class FrancTest {
 
     @Test
     void testFranceMultiplication() {
-        Franc five = new Franc(5);
-        assertEquals(new Franc(10), five.times(2));
-        assertEquals(new Franc(15), five.times(3));
+        Franc five = new Franc(5, "CHF");
+        assertEquals(new Franc(10, "CHF"), five.times(2));
+        assertEquals(new Franc(15, "CHF"), five.times(3));
     }
 }

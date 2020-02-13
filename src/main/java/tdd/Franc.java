@@ -6,12 +6,12 @@ package tdd;
  * Blog: https://mocadev.tistory.com
  */
 public class Franc extends Money {
-    public Franc(int amount) {
-        this.amount = amount;
+    public Franc(int amount, String currency) {
+        super(amount, currency);
     }
 
     public Money times(int multiply) {
-        return new Franc(amount * multiply);
+        return new Franc(amount * multiply, currency);
     }
 
     public int amount() {
@@ -22,5 +22,10 @@ public class Franc extends Money {
     public boolean equals(Object object) {
         Franc dollar = (Franc) object;
         return amount == dollar.amount;
+    }
+
+    @Override
+    public String currency() {
+        return currency;
     }
 }
