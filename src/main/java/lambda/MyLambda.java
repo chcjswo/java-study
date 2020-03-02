@@ -22,6 +22,20 @@ public class MyLambda {
         System.out.println(list2);
 
         IntStream a = new Random().ints(1, 10);
-        a.limit(6).distinct().sorted().forEach(System.out::println);
+        a.boxed().limit(6).distinct().sorted().forEach(System.out::println);
+
+        System.out.println("===============================================");
+
+        List<Integer> range = IntStream.range(1, 46).boxed().collect(Collectors.toCollection(ArrayList::new));
+        Collections.shuffle(range);
+        range.subList(0, 6).forEach(System.out::println);
+
+        System.out.println("===============================================");
+
+        Random r = new Random();
+        int[] rang = IntStream
+            .generate( () -> r.nextInt(46) + 1)
+            .distinct().limit(6).sorted().toArray();
+        System.out.println(Arrays.toString(rang));
     }
 }
