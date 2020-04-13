@@ -1,12 +1,15 @@
 package print;
 
-import javafx.application.Platform;
+//import javafx.application.Platform;
 
 import javax.print.*;
 import javax.print.event.PrintJobAdapter;
 import javax.print.event.PrintJobEvent;
 import java.awt.*;
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by chcjswo on 2020-04-12
@@ -34,7 +37,7 @@ public class PrintHandler {
 
     public void startPrintJob() {
         try {
-            Platform.runLater(() -> statusLabel.setText("PRINTING"));
+//            Platform.runLater(() -> statusLabel.setText("PRINTING"));
             delay(5000);
             InputStream is = new BufferedInputStream(this.fis);
             DocFlavor flavor = DocFlavor.INPUT_STREAM.PDF;
@@ -138,14 +141,14 @@ public class PrintHandler {
                                 break;
 
                         }
-                        Platform.runLater(() -> statusLabel.setText(state));
+//                        Platform.runLater(() -> statusLabel.setText(state));
                         delay(5000);
                         notify = false;
                     } catch (InterruptedException e) {
                     }
                 }
                 delay(5000);
-                Platform.runLater(() -> statusLabel.setText(""));
+//                Platform.runLater(() -> statusLabel.setText(""));
             };
             Thread monitor = new Thread(runner);
             monitor.start();
