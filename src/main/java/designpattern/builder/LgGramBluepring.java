@@ -17,17 +17,17 @@ class LgGramBluePrint extends BluePrint  {
 
     @Override
     void setCpu() {
-
+        computer.setCpu("i7");
     }
 
     @Override
     void setRam() {
-
+        computer.setRam("16G");
     }
 
     @Override
     void setStorage() {
-
+        computer.setStorage("256G SSD");
     }
 
     @Override

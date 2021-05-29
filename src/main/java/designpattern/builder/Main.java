@@ -14,9 +14,10 @@ public class Main {
         factory.setBlueprint(new LgGramBluePrint());
 //        factory.setBlueprint(new MacBluepring());
 //        factory.setBlueprint(new SonyBluepring());
-        Computer computer = factory.make();
 
-//        Computer computer = new Computer("i7", "16g", "1t ssd");
+        factory.make();
+        Computer computer = factory.getComputer();
+
         System.out.println("computer = " + computer);
     }
 
