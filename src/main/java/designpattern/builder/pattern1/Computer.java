@@ -1,4 +1,4 @@
-package designpattern.builder;
+package designpattern.builder.pattern1;
 
 /**
  * @author chcjswo
