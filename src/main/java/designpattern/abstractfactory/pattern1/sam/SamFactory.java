@@ -1,8 +1,8 @@
-package designpattern.abstractfactory.sam;
+package designpattern.abstractfactory.pattern1.sam;
 
-import designpattern.abstractfactory.factory.BikeFactory;
-import designpattern.abstractfactory.factory.Body;
-import designpattern.abstractfactory.factory.Wheel;
+import designpattern.abstractfactory.pattern1.factory.BikeFactory;
+import designpattern.abstractfactory.pattern1.factory.Body;
+import designpattern.abstractfactory.pattern1.factory.Wheel;
 
 /**
  * @author chcjswo

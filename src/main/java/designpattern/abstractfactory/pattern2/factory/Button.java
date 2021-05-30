@@ -1,6 +1,4 @@
-package designpattern.abstractfactory.gt;
-
-import designpattern.abstractfactory.factory.Body;
+package designpattern.abstractfactory.pattern2.factory;
 
 /**
  * @author chcjswo
@@ -9,5 +7,8 @@ import designpattern.abstractfactory.factory.Body;
  * @github https://github.com/chcjswo
  * @since 2021-05-31
  **/
-public class GtBody implements Body {
+public interface Button {
+
+    void click();
+
 }

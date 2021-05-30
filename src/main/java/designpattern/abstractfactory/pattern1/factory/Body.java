@@ -1,4 +1,4 @@
-package designpattern.abstractfactory.factory;
+package designpattern.abstractfactory.pattern1.factory;
 
 /**
  * @author chcjswo

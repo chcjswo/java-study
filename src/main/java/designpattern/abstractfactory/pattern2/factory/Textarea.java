@@ -1,4 +1,4 @@
-package designpattern.abstractfactory.factory;
+package designpattern.abstractfactory.pattern2.factory;
 
 /**
  * @author chcjswo
@@ -7,9 +7,8 @@ package designpattern.abstractfactory.factory;
  * @github https://github.com/chcjswo
  * @since 2021-05-31
  **/
-public interface BikeFactory {
+public interface Textarea {
 
-    Body createBody();
-    Wheel createWheel();
+    String getText();
 
 }

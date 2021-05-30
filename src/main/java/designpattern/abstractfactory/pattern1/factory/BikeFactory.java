@@ -1,6 +1,4 @@
-package designpattern.abstractfactory.gt;
-
-import designpattern.abstractfactory.factory.Wheel;
+package designpattern.abstractfactory.pattern1.factory;
 
 /**
  * @author chcjswo
@@ -9,5 +7,9 @@ import designpattern.abstractfactory.factory.Wheel;
  * @github https://github.com/chcjswo
  * @since 2021-05-31
  **/
-public class GtWheel implements Wheel {
+public interface BikeFactory {
+
+    Body createBody();
+    Wheel createWheel();
+
 }

@@ -1,6 +1,6 @@
-package designpattern.abstractfactory.sam;
+package designpattern.abstractfactory.pattern1.sam;
 
-import designpattern.abstractfactory.factory.Wheel;
+import designpattern.abstractfactory.pattern1.factory.Wheel;
 
 /**
  * @author chcjswo

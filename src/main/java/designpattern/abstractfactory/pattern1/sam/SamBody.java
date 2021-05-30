@@ -1,6 +1,6 @@
-package designpattern.abstractfactory.sam;
+package designpattern.abstractfactory.pattern1.sam;
 
-import designpattern.abstractfactory.factory.Body;
+import designpattern.abstractfactory.pattern1.factory.Body;
 
 /**
  * @author chcjswo
