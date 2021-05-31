@@ -1,0 +1,27 @@
+package designpattern.decorator.case2;
+
+/**
+ * @author chcjswo
+ * @version 1.0.0
+ * @blog https://mocadev.tistory.com
+ * @github https://github.com/chcjswo
+ * @since 2021-05-31
+ **/
+public class Espresso extends AbstractAdding {
+
+    protected static int espressoCount = 0;
+
+    public Espresso(IBeverage beverage) {
+        super(beverage);
+    }
+
+    @Override
+    public int getTotalPrice() {
+        return super.getTotalPrice() + getAddPrice();
+    }
+
+    private int getAddPrice() {
+        return 100;
+    }
+
+}
