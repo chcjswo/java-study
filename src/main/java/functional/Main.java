@@ -2,6 +2,7 @@ package functional;
 
 import functional.util.Adder;
 
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
 /**
@@ -17,5 +18,13 @@ public class Main {
         Function<Integer, Integer> adder = new Adder();
         final Integer result = adder.apply(10);
         System.out.println("result = " + result);
+
+        final Function<Integer, Integer> function = (Integer x) -> x + 10;
+        final Integer apply = function.apply(12);
+        System.out.println("apply = " + apply);
+
+        BiFunction<Integer, Integer, Integer> add = Integer::sum;
+        final Integer addResult = add.apply(1, 2);
+        System.out.println("addResult = " + addResult);
     }
 }
