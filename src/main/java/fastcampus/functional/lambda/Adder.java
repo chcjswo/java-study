@@ -1,4 +1,4 @@
-package functional.util;
+package fastcampus.functional.lambda;
 
 import java.util.function.Function;
 
