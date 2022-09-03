@@ -18,6 +18,10 @@ public class Main {
         consumer.accept("test");
         final List<String> inputs = Arrays.asList("test1", "test2", "test3");
         process(inputs, consumer);
+        Consumer<String> consumer1 = (String str) -> {
+            System.out.println("process start = " + str);
+        };
+        process(inputs, consumer1);
     }
 
     public static void process(List<String> inputs, Consumer<String> processor) {
