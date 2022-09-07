@@ -14,7 +14,7 @@ import java.util.List;
 public class Order {
     private long id;
     private LocalDateTime createdAt;
-    private long cratedByUserId;
+    private long createdByUserId;
     private OrderStatus status;
     private BigDecimal amount;
     private List<OrderLine> orderLines;
@@ -44,12 +44,12 @@ public class Order {
         return this;
     }
 
-    public long getCratedByUserId() {
-        return cratedByUserId;
+    public long getCreatedByUserId() {
+        return createdByUserId;
     }
 
-    public Order setCratedByUserId(long cratedByUserId) {
-        this.cratedByUserId = cratedByUserId;
+    public Order setCreatedByUserId(long createdByUserId) {
+        this.createdByUserId = createdByUserId;
         return this;
     }
 
@@ -82,6 +82,6 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" + "id=" + id + ", createdAt=" + createdAt + ", cratedByUserId=" + cratedByUserId + ", status=" + status + ", amount=" + amount + ", orderLines=" + orderLines + '}';
+        return "Order{" + "id=" + id + ", createdAt=" + createdAt + ", cratedByUserId=" + createdByUserId + ", status=" + status + ", amount=" + amount + ", orderLines=" + orderLines + '}';
     }
 }
