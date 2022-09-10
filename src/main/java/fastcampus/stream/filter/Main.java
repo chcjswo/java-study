@@ -30,10 +30,10 @@ public class Main {
         System.out.println("collect = " + collect);
 
         final User user1 = new User().setId(1).setName("tony1").setVerified(true).setEmail("tony1@test.com");
-        final User user2 = new User().setId(1).setName("tony2").setVerified(false).setEmail("tony2@gmail.com");
-        final User user3 = new User().setId(1).setName("tony3").setVerified(true).setEmail("tony3@test.com");
-        final User user4 = new User().setId(1).setName("tony4").setVerified(false).setEmail("tony4@test.com");
-        final User user5 = new User().setId(1).setName("tony5").setVerified(true).setEmail("tony5@test.com");
+        final User user2 = new User().setId(2).setName("tony2").setVerified(false).setEmail("tony2@gmail.com");
+        final User user3 = new User().setId(3).setName("tony3").setVerified(true).setEmail("tony3@test.com");
+        final User user4 = new User().setId(4).setName("tony4").setVerified(false).setEmail("tony4@test.com");
+        final User user5 = new User().setId(5).setName("tony5").setVerified(true).setEmail("tony5@test.com");
 
         final List<User> users = Arrays.asList(user1, user2, user3, user4, user5);
         final List<User> verifiedUsers = users.stream()
