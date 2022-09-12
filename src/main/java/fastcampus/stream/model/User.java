@@ -1,5 +1,6 @@
 package fastcampus.stream.model;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -16,6 +17,16 @@ public class User {
     private String email;
     private boolean isVerified;
     private List<Integer> friendUserId;
+    private LocalDateTime createdAt;
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public User setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
 
     public int getId() {
         return id;
