@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * @author chcjswo
@@ -38,5 +39,10 @@ public class Main {
         for (User user : collect1.get(false)) {
             System.out.println("many friends = " + user);
         }
+
+        IntStream.range(0, collect1.size()).forEach(i -> {
+            final User user = users.get(i);
+            System.out.println("user.getName() = " + user.getName() + " / i = " + i);
+        });
     }
 }
