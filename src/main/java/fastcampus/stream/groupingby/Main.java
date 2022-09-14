@@ -1,15 +1,13 @@
-package fastcampus.stream.tomap;
+package fastcampus.stream.groupingby;
 
 import fastcampus.stream.model.Order;
-import fastcampus.stream.model.User;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
+import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * @author chcjswo
@@ -20,22 +18,21 @@ import java.util.stream.Stream;
  **/
 public class Main {
     public static void main(String[] args) {
-        final Map<Integer, String> collect = Stream.of(3, 5, -4, 2, 6)
-            .collect(Collectors.toMap(Function.identity(), x -> "Number is " + x));
+        final List<Integer> integers = Arrays.asList(1, 4, 5, 13, 2, 1001, 21, 24, 55, 66, 2321, 343, 21345, 1001);
+        final Map<Integer, List<Integer>> collect = integers.stream()
+            .collect(Collectors.groupingBy(x -> x % 10));
         System.out.println("collect = " + collect);
 
-        final User user1 = new User().setId(1001).setName("tony").setVerified(true).setEmail("tony1@test.com");
-        final User user2 = new User().setId(1002).setName("micheal").setVerified(false).setEmail("tony2@gmail.com");
-        final User user3 = new User().setId(1003).setName("bob").setVerified(true).setEmail("tony3@test.com");
-        final User user4 = new User().setId(1004).setName("alice").setVerified(false).setEmail("tony4@test.com");
-        final User user5 = new User().setId(1005).setName("chcjswo").setVerified(true).setEmail("tony5@test.com");
-        List<User> users = Arrays.asList(user1, user2, user3, user4, user5);
-
-        final Map<Integer, User> collect1 = users.stream()
-            .collect(Collectors.toMap(User::getId, Function.identity()));
+        final Map<Integer, Set<Integer>> collect1 = integers.stream()
+            .collect(Collectors.groupingBy(x -> x % 10,
+                Collectors.toSet()));
         System.out.println("collect1 = " + collect1);
-        System.out.println(collect1.get(1005));
 
+        final Map<Integer, List<String>> collect2 = integers.stream()
+            .collect(Collectors.groupingBy(x -> x % 10,
+                Collectors.mapping(x -> "digit is " + x,
+                    Collectors.toList())));
+        System.out.println("collect2 = " + collect2);
         final Order order1 = new Order()
             .setId(1001)
             .setStatus(Order.OrderStatus.CRATED)
@@ -58,8 +55,14 @@ public class Main {
             .setAmount(BigDecimal.valueOf(1000));
         final List<Order> orders = Arrays.asList(order1, order2, order3, order4, order5);
 
-        final Map<Long, Order.OrderStatus> collect2 = orders.stream()
-            .collect(Collectors.toMap(Order::getId, Order::getStatus));
-        System.out.println("collect2 = " + collect2);
+        final Map<Order.OrderStatus, List<Order>> collect3 = orders.stream()
+            .collect(Collectors.groupingBy(Order::getStatus, Collectors.toList()));
+        System.out.println("collect3 = " + collect3);
+
+        final Map<Order.OrderStatus, BigDecimal> collect4 = orders.stream()
+            .collect(Collectors.groupingBy(Order::getStatus,
+                Collectors.mapping(Order::getAmount,
+                    Collectors.reducing(BigDecimal.ZERO, BigDecimal::add))));
+        System.out.println("collect4 = " + collect4);
     }
 }
