@@ -41,7 +41,7 @@ public class Main {
         LocalDateTime now = LocalDateTime.now(ZoneId.of("Asia/Seoul"));
         final Order order1 = new Order()
             .setId(orderId++)
-            .setStatus(Order.OrderStatus.CRATED)
+            .setStatus(Order.OrderStatus.CREATED)
             .setCreatedAt(now.minusHours(4))
             .setCreatedByUserId(createdUserId++);
         final Order order2 = new Order()

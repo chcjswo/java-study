@@ -20,7 +20,7 @@ public class Order {
     private List<OrderLine> orderLines;
 
     public enum OrderStatus {
-        CRATED,
+        CREATED,
         IN_PROGRESS,
         ERROR,
         PROCESSED

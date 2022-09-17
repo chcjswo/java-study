@@ -35,7 +35,7 @@ public class Main {
         System.out.println("collect2 = " + collect2);
         final Order order1 = new Order()
             .setId(1001)
-            .setStatus(Order.OrderStatus.CRATED)
+            .setStatus(Order.OrderStatus.CREATED)
             .setAmount(BigDecimal.valueOf(3000));
         final Order order2 = new Order()
             .setId(1002)

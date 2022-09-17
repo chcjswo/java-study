@@ -48,7 +48,7 @@ public class Main {
         System.out.println("unverifiedUsers = " + unverifiedUsers);
         System.out.println(unverifiedUsers.size());
 
-        final Order order1 = new Order().setId(1001).setStatus(Order.OrderStatus.CRATED);
+        final Order order1 = new Order().setId(1001).setStatus(Order.OrderStatus.CREATED);
         final Order order2 = new Order().setId(1001).setStatus(Order.OrderStatus.ERROR);
         final Order order3 = new Order().setId(1001).setStatus(Order.OrderStatus.PROCESSED);
         final Order order4 = new Order().setId(1001).setStatus(Order.OrderStatus.ERROR);
