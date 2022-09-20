@@ -1,5 +1,7 @@
 package tdd;
 
+import com.mocadev.tdd.bank.Dollar;
+import com.mocadev.tdd.bank.Money;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
